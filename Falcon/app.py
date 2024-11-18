@@ -183,8 +183,6 @@ if st.session_state.page == "maintenance_report":
 if st.session_state.plate in TRUCKS and "fotos" in TRUCKS[st.session_state.plate]:
     for foto in TRUCKS[st.session_state.plate]["fotos"]:
         st.image(foto, caption=f"Caminhão {st.session_state.model}", width=600)
-    else:
-        st.error("Não há fotos disponíveis para este caminhão.")
 
     # Criar campos para o relatório de manutenção
     st.text_area("Condições dos Pneus:", height=100, key="pneu")
