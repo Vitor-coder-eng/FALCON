@@ -105,7 +105,7 @@ TRUCKS = {
     "956-VAH": {
         "modelo": "Western Star 49x", 
         "fotos": [
-            "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/Western_star_49x.png", 
+            "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/Western_Star_49x.png", 
             "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/49x_from_behind.png"
         ]
     },
