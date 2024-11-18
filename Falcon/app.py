@@ -102,10 +102,29 @@ with st.sidebar:
 
 # Dados dos caminhões
 TRUCKS = { 
-    "956-VAH": {"modelo": "Western Star 49x", "fotos": ["Western_star_49x.png", "49x_from_behind.png"]}, 
-    "GDA-357": {"modelo": "Western Star 4900", "fotos": ["Western_Star_4900.png", "4900_from_the_side.png"]}, 
-    "586-GKS": {"modelo": "Western Star 4700", "fotos": ["Western_Star_4700.png", "4700_on_the_other_side.png"]} 
+    "956-VAH": {
+        "modelo": "Western Star 49x", 
+        "fotos": [
+            "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/Western_star_49x.png", 
+            "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/49x_from_behind.png"
+        ]
+    }, 
+    "GDA-357": {
+        "modelo": "Western Star 4900", 
+        "fotos": [
+            "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/Western_Star_4900.png", 
+            "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/4900_from_the_side.png"
+        ]
+    }, 
+    "586-GKS": {
+        "modelo": "Western Star 4700", 
+        "fotos": [
+            "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/Western_Star_4700.png", 
+            "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/4700_on_the_other_side.png"
+        ]
+    }
 }
+
 
 # Função para navegação
 def navigate_to(page):
@@ -162,9 +181,9 @@ if st.session_state.page == "maintenance_report":
     st.write(f"Placa: {st.session_state.plate}")
 
     # Exibir as imagens do caminhão (antes dos campos de texto)
-    if st.session_state.plate in TRUCKS and "fotos" in TRUCKS[st.session_state.plate]:
-        for foto in TRUCKS[st.session_state.plate]["fotos"]:
-            st.image(f"imagens/{foto}", caption=f"Caminhão {st.session_state.model}", width=600)
+   if st.session_state.plate in TRUCKS and "fotos" in TRUCKS[st.session_state.plate]:
+    for foto in TRUCKS[st.session_state.plate]["fotos"]:
+        st.image(foto, caption=f"Caminhão {st.session_state.model}", width=600)
     else:
         st.error("Não há fotos disponíveis para este caminhão.")
 
