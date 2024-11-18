@@ -101,21 +101,21 @@ with st.sidebar:
             st.success(f"Seja bem-vindo ao Falcon, {st.session_state.nome_usuario}!") 
 
 # Dados dos caminhões
-TRUCKS = { 
+TRUCKS = {
     "956-VAH": {
         "modelo": "Western Star 49x", 
         "fotos": [
             "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/Western_star_49x.png", 
             "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/49x_from_behind.png"
         ]
-    }, 
+    },
     "GDA-357": {
         "modelo": "Western Star 4900", 
         "fotos": [
             "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/Western_Star_4900.png", 
             "https://raw.githubusercontent.com/Vitor-coder-eng/FALCON/main/Falcon/Imagens/4900_from_the_side.png"
         ]
-    }, 
+    },
     "586-GKS": {
         "modelo": "Western Star 4700", 
         "fotos": [
@@ -124,7 +124,6 @@ TRUCKS = {
         ]
     }
 }
-
 
 # Função para navegação
 def navigate_to(page):
@@ -181,7 +180,7 @@ if st.session_state.page == "maintenance_report":
     st.write(f"Placa: {st.session_state.plate}")
 
     # Exibir as imagens do caminhão (antes dos campos de texto)
-   if st.session_state.plate in TRUCKS and "fotos" in TRUCKS[st.session_state.plate]:
+if st.session_state.plate in TRUCKS and "fotos" in TRUCKS[st.session_state.plate]:
     for foto in TRUCKS[st.session_state.plate]["fotos"]:
         st.image(foto, caption=f"Caminhão {st.session_state.model}", width=600)
     else:
